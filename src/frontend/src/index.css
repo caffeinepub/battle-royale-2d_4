@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0;
+    /* Dark military terrain background */
+    --background: 0.178 0.015 125.2;
+    --foreground: 0.918 0.012 82.1;
+    /* Card: dark charcoal panels */
+    --card: 0.155 0.012 125.2;
+    --card-foreground: 0.918 0.012 82.1;
+    --popover: 0.155 0.012 125.2;
+    --popover-foreground: 0.918 0.012 82.1;
+    /* Primary: olive green */
+    --primary: 0.482 0.075 120.3;
+    --primary-foreground: 0.92 0.012 82.1;
+    /* Secondary: muted dark */
+    --secondary: 0.22 0.015 125.2;
+    --secondary-foreground: 0.918 0.012 82.1;
+    --muted: 0.22 0.015 125.2;
+    --muted-foreground: 0.65 0.018 82.1;
+    /* Accent: olive highlight */
+    --accent: 0.482 0.075 120.3;
+    --accent-foreground: 0.92 0.012 82.1;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.3 0.025 125.2;
+    --input: 0.25 0.018 125.2;
+    --ring: 0.482 0.075 120.3;
+    /* Game HUD panel colors */
+    --hud-bg: 0.155 0.012 125.2;
+    --olive: 0.482 0.075 120.3;
+    --gold: 0.82 0.18 85.8;
+    --health-red: 0.58 0.22 27.3;
+    --zone-blue: 0.55 0.18 245.2;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.155 0.012 125.2;
+    --sidebar-foreground: 0.918 0.012 82.1;
+    --sidebar-primary: 0.482 0.075 120.3;
+    --sidebar-primary-foreground: 0.92 0.012 82.1;
+    --sidebar-accent: 0.22 0.015 125.2;
+    --sidebar-accent-foreground: 0.918 0.012 82.1;
+    --sidebar-border: 0.3 0.025 125.2;
+    --sidebar-ring: 0.482 0.075 120.3;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* Military panel style */
+  .hud-panel {
+    background: rgba(27, 30, 26, 0.78);
+    border: 1px solid #3a4036;
+    color: #e6e2d6;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .military-text {
+    font-family: "JetBrains Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
